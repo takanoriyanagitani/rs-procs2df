@@ -1,0 +1,15 @@
+[package]
+name = "procs2df"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies.rs-procs2df]
+path = "../../.."
+
+[dependencies.tokio]
+version = "1"
+default-features = false
+features = [
+	"macros",
+	"rt-multi-thread",
+]
