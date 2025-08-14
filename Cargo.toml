@@ -1,0 +1,40 @@
+[package]
+name = "rs-procs2df"
+version = "0.1.0"
+edition = "2024"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+unwrap_used = "forbid"
+
+[dependencies.sysinfo]
+version = "0.37.0"
+default-features = false
+features = [
+	"component",
+	"disk",
+	"network",
+	"system",
+	"user",
+]
+
+[dependencies.datafusion]
+version = "49.0.0"
+default-features = false
+features = [
+	"datetime_expressions",
+	"encoding_expressions",
+	"nested_expressions",
+	"recursive_protection",
+	"regex_expressions",
+	"string_expressions",
+	"unicode_expressions",
+]
+
+[dependencies.async-trait]
+version = "0"
+default-features = false
+features = [
+]
